@@ -13,6 +13,13 @@ document.getElementById('deposite-btn').addEventListener('click' , function(){
     const newDepositeTotal = PreviousDeposite + newDepositeAmount;
     depositeTotal.innerText = newDepositeTotal;
 
+    // balance updated 
+    const balancTotal = document.getElementById('balanc-total');
+    const balaceTotalText = balancTotal.innerText;
+    const peiviousBalnceTatal =parseFloat(balaceTotalText);
+
+    const newBalace = peiviousBalnceTatal + newDepositeAmount;
+    balancTotal.innerText = newBalace;
     depositeInput.value = '';
 });
 
@@ -30,6 +37,14 @@ document.getElementById('Withdraw-btn').addEventListener('click', function(){
 
     const newWithDrawTotal =priviousWithdraw + newWithDrawAmount;
     WithdrawTotal.innerText = newWithDrawTotal;
+
+
+    const balancTotal = document.getElementById('balanc-total');
+    const balaceTotalText = balancTotal.innerText;
+    const peiviousBalnceTatal =parseFloat(balaceTotalText);
+
+    const newBalace = peiviousBalnceTatal - newWithDrawAmount;
+    balancTotal.innerText = newBalace;
 
     WithdrawInput.value = '';
 
